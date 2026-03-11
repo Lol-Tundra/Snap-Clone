@@ -1,0 +1,8 @@
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #FFFC00; margin: 0; display: flex; justify-content: center; height: 100vh; }
+#app { width: 100%; max-width: 400px; background: white; display: flex; flex-direction: column; border-radius: 20px; margin: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+#chat-window { flex-grow: 1; padding: 20px; overflow-y: scroll; display: flex; flex-direction: column-reverse; }
+.controls { padding: 15px; border-top: 1px solid #eee; display: flex; flex-direction: column; gap: 10px; }
+input { padding: 12px; border: 1px solid #ddd; border-radius: 25px; outline: none; }
+button { background: #00AEFF; color: white; border: none; padding: 12px; border-radius: 25px; font-weight: bold; cursor: pointer; }
+.msg { background: #f1f1f1; padding: 10px 15px; border-radius: 15px; margin-bottom: 8px; max-width: 80%; }
+.msg.me { align-self: flex-end; background: #00AEFF; color: white; }
