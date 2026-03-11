@@ -3,20 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapClone</title>
+    <title>Snapchat Web Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
-        </div>
-        <div class="controls">
-            <input id="handle" type="text" placeholder="Username" />
-            <input id="message" type="text" placeholder="Type a snap..." />
-            <button id="send">Send</button>
-        </div>
+    <div class="container">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <div class="user-pill">
+                    <div class="avatar">👤</div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+            </header>
+            <div class="friend-list">
+                <div class="friend-item active">
+                    <div class="avatar">👥</div>
+                    <div class="friend-info">
+                        <strong>Roomies</strong>
+                        <p>Opened · 1h</p>
+                    </div>
+                </div>
+                </div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="chat-title">
+                    <div class="avatar-sm">👥</div>
+                    <strong>Roomies</strong>
+                </div>
+                <div class="header-actions">
+                    <button class="call-btn">Call</button>
+                </div>
+            </header>
+
+            <div id="chat-window">
+                <div id="output"></div>
+            </div>
+
+            <div class="input-container">
+                <input id="handle" type="text" placeholder="Your Name" value="User123">
+                <div class="message-box">
+                    <input id="message" type="text" placeholder="Send a chat">
+                    <button id="send">➤</button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="right-panel">
+            <div class="video-placeholder">
+                <div class="video-overlay">
+                    <p>Beatriz M</p>
+                    <span>0:19</span>
+                </div>
+                <div class="hang-up">Hang up</div>
+            </div>
+        </aside>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
